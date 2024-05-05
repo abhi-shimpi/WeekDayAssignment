@@ -1,0 +1,112 @@
+/* common css */
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* justify content */
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* alignment */
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+/* Gap */
+.gap-16 {
+    gap: 1rem;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-8 {
+    gap: 0.5em;
+}
+
+/* cursors */
+.pointer {
+    cursor: pointer;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.text-size-12 {
+    font-size: 12px;
+}
+
+.text-size-14 {
+    font-size: 14px;
+}
+
+.text-size-16 {
+    font-size: 16px;
+}
+
+.text-size-20 {
+    font-size: 20px;
+}
+
+/* width */
+.w-80 {
+    width: 80%;
+}
+
+.border-bottom-grey {
+    border-bottom: 1px solid grey;
+}
+
+/* Margin */
+.margin-auto {
+    margin: auto;
+}
+
+/* Padding */
+.pad-tb-10 {
+    padding: 10px 0px 10px 0px;
+}
+
+.pad-tb-12 {
+    padding: 21px 0px 12px 0px;
+}
