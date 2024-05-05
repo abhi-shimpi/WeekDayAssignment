@@ -5,19 +5,12 @@ import { Constants } from '../../constants/constants';
 import Dropdown from "../custom-dropdown/CustomDropdown.jsx";
 import CustomInputField from '../custom-input-search/CustomInputSearch.jsx';
 
-const Filters = () => {
+const Filters = ({filters,setFilters}) => {
     const roleDropdownOptions = Constants.dummyRoleDropdownOptions;
     const minExperienceDropdownOptions = Constants.dummyExperienceDrodownOptions;
     const locationDropdownOptions = Constants.dummyLocationDropDownOptions;
     const minBasePayDropdownOptions = Constants.dummyBasePayDrodownOptions;
 
-    const [filters, setFilters] = useState({
-        roles: [],
-        minExperience: "",
-        location: [],
-        minBasePay: "",
-        companyName: ""
-    })
     const handleFormDataChange = async (formFieldData) => {
         console.log(formFieldData);
         setFilters({ ...filters, [formFieldData.id]: formFieldData.value })

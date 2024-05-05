@@ -1,11 +1,6 @@
 export const Constants = {
-    defaultTimeOut: 0,
-    defaultDataCount: 0,
-    defaultPage: 1,
-    defaultPageSize: 10,
-    pageSize3: 3,
-    pageSize4: 4,
-    pageSize5: 5,
+    currentUSD :  83.38,
+    notMentioned : "Not Mentioned",
     multiselectDropdownChipStyles: {
         backgroundColor: "rgb(230, 230, 230)",
         color: "rgb(51, 51, 51)",
@@ -81,5 +76,9 @@ export const Constants = {
         { label : "30L" , value: 3000000},
         { label : "40L" , value: 4000000},
         { label : "50L" , value: 5000000},
+        { label : "60L" , value: 6000000},
+        { label : "70L" , value: 7000000},
+        { label : "80L" , value: 8000000},
+        { label : "90L" , value: 9000000},
     ],
 }
