@@ -1,7 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import "./JobCard.css";
 import { Constants } from '../../constants/constants';
+import JobDetailsPopup from "../job-details-box/JobDetailsPopup";
 
 const JobCard = ({
     jdUid,
@@ -17,6 +18,7 @@ const JobCard = ({
     companyName,
     logoUrl
 }) => {
+    const [isJobDetailsPopupOpen,setIsJobDetailsPopupOpen] = useState(false);
 
     function usdToLpa(minSalaryUSD, maxSalaryUSD) {
         const conversionRate = Constants.currentUSD;
@@ -33,7 +35,7 @@ const JobCard = ({
     }
 
     return (
-        <Box className="job-card pointer margin-5">
+        <Box className="job-card margin-5">
             <Box className="d-flex gap-10 pad-tb-10">
                 <Box className="image">
                     <img src={logoUrl} alt="logo" className='img-wh-100' />
@@ -59,9 +61,29 @@ const JobCard = ({
                 <Typography>{minExp ? minExp + " Years": Constants.notMentioned} </Typography>
             </Box>
             <Box className="apply-btn pointer">
-                <Typography>⚡ Easy Apply</Typography>
+                <Typography onClick={(e)=>{
+                    e.stopPropagation();
+                    window.open(jdLink,'_blank');
+                }}>⚡ Easy Apply</Typography>
             </Box>
-            <Box className="view-job">View Job</Box>
+            <Box className="view-job">
+                <span className='pointer' onClick={()=>setIsJobDetailsPopupOpen(true)}>View Job</span>
+            </Box>
+            {isJobDetailsPopupOpen ? 
+                <JobDetailsPopup 
+                    isOpen={isJobDetailsPopupOpen} 
+                    onClose={()=>setIsJobDetailsPopupOpen(false)}
+                    companyName={companyName}
+                    jobRole={jobRole}
+                    salary={usdToLpa(minJdSalary, maxJdSalary) || Constants.notMentioned}
+                    experience={minExp}
+                    location={location}
+                    jobDetailsFromCompany={jobDetailsFromCompany}
+                    jdLink={jdLink}
+                >
+                </JobDetailsPopup> : 
+                <></>
+            }
         </Box>
     )
 }
