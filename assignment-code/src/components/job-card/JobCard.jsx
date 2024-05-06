@@ -33,7 +33,7 @@ const JobCard = ({
     }
 
     return (
-        <Box className="job-card pointer">
+        <Box className="job-card pointer margin-5">
             <Box className="d-flex gap-10 pad-tb-10">
                 <Box className="image">
                     <img src={logoUrl} alt="logo" className='img-wh-100' />

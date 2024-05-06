@@ -12,10 +12,8 @@ const Filters = ({filters,setFilters}) => {
     const minBasePayDropdownOptions = Constants.dummyBasePayDrodownOptions;
 
     const handleFormDataChange = async (formFieldData) => {
-        console.log(formFieldData);
         setFilters({ ...filters, [formFieldData.id]: formFieldData.value })
     };
-    console.log(filters);
     return (
         <Box className="d-flex gap-10 align-center flex-wrap">
             {/* Roles */}

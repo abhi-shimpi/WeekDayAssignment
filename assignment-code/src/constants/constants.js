@@ -1,6 +1,7 @@
 export const Constants = {
     currentUSD :  83.38,
     notMentioned : "Not Mentioned",
+    height80vh : "80vh",
     multiselectDropdownChipStyles: {
         backgroundColor: "rgb(230, 230, 230)",
         color: "rgb(51, 51, 51)",
