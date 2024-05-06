@@ -8,4 +8,4 @@
 
    1. Write the command npm start 
    2. It will redirect to http://localhost:3000/ 
-   3. Your ready to evaluate!
+   3. You are ready to evaluate!
